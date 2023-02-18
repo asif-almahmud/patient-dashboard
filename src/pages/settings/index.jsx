@@ -1,8 +1,7 @@
 import React from "react";
-import DashboardLayout from "../../layouts/dashboard-layout";
 
 const Settings = () => {
-  return <DashboardLayout>Settings</DashboardLayout>;
+  return <div>Settings</div>;
 };
 
 export default Settings;
