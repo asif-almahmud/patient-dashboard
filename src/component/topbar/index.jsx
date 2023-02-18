@@ -5,9 +5,11 @@ import Navbar from "../navbar";
 
 const Topbar = () => {
   const [open, setOpen] = useState(false);
+  const [render, setRender] = useState(false);
   const { width } = useWindowDimensions();
 
   const openModal = () => {
+    !render && setRender(true);
     setOpen(true);
   };
 
@@ -28,13 +30,15 @@ const Topbar = () => {
         <i className="uil uil-bars"></i>
       </button>
 
-      <Modal
-        open={open}
-        closeModal={closeModal}
-        stylingClasses={`${open ? "open-sidebar" : "close-sidebar"}`}
-      >
-        <Navbar closeModal={closeModal} />
-      </Modal>
+      {render && (
+        <Modal
+          open={open}
+          closeModal={closeModal}
+          stylingClasses={`${open ? "open-sidebar" : "close-sidebar"}`}
+        >
+          <Navbar closeModal={closeModal} />
+        </Modal>
+      )}
     </div>
   );
 };
