@@ -1,8 +1,8 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
-import Container from "../../component/container";
-import Navbar from "../../component/navbar";
-import Topbar from "../../component/topbar";
+import Container from "../../components/container";
+import Navbar from "../../components/navbar";
+import Topbar from "../../components/topbar";
 
 const DashboardLayout = () => {
   return (
